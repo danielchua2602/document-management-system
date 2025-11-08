@@ -22,7 +22,7 @@ CREATE DATABASE document_management_system;
 USE document_management_system;
 ```
 
-Run the migration scripts in the `document-management-api/src/sql/` directory to set up the necessary tables. (Run them in order, 1 -> 3)
+Run the migration scripts in the [scripts](document-management-api/src/sql/) directory to set up the necessary tables. (Run them in order, 1 -> 3)
 
 ### 2. Backend API Setup
 
@@ -35,25 +35,10 @@ cd document-management-api
 Copy the environment example file and configure your settings:
 
 ```bash
-cp .env.example .env.local
+cp .env.example .env
 ```
 
 Edit the [.env.local](document-management-api/.env.local) file with your database credentials and other configuration:
-
-```env
-# Database Configuration
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=document_management
-DB_USER=your_username
-DB_PASSWORD=your_password
-
-# Server Configuration
-PORT=3000
-NODE_ENV=development
-
-# Add other required environment variables as needed
-```
 
 Install dependencies:
 
@@ -82,12 +67,6 @@ cp .env.example .env.local
 ```
 
 Edit the [.env.local](document-management-ui/.env.local) file with your API configuration if necessary:
-
-```env
-# API Configuration
-NEXT_PUBLIC_API_URL=http://localhost:5176
-# Add other required environment variables
-```
 
 Install dependencies:
 
